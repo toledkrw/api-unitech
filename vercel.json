@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/main.py",
+      "methods": ["GET","POST","PUT","DELETE","OPTIONS"],
+      "headers": {
+        "Acces-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Methods": "*"
+      }
+    }
+  ]
+}
