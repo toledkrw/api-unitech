@@ -12,6 +12,8 @@
 
 	// 👇 Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "poetry shell && poetry install",
+	
+	// 👇 Use 'postAttachCommand' to run commands after the container is attached. 
 	"postAttachCommand": "poetry shell",
 
 	// 👇 Configure tool-specific properties.
