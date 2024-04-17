@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Api for AI"
 authors = ["toledkrw <matheusot.900009306@uniacademia.edu.br>", "reisrafaeldev <rafaelro.900022981@uniacademia.edu.br>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
