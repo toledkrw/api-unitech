@@ -11,7 +11,7 @@
 	// "forwardPorts": [],
 
 	// 👇 Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": ". .devcontainer/post_creation.sh",
+	"postCreateCommand": "/bin/bash .devcontainer/post_creation.sh",
 	
 	// 👇 Use 'postAttachCommand' to run commands after the container is attached. 
 	// "postAttachCommand": "poetry shell",
