@@ -2,7 +2,7 @@
   "version": 2,
   "build": {
     "env": {
-      "POETRY_VERSION": "1.8.2"
+      "POETRY_VERSION": "1.8.3"
     }
   },
   "builds": [
@@ -10,8 +10,8 @@
       "src": "api/app.py",
       "use": "@vercel/python",
       "config": {
-        "runtime": "python3.10",
-        "maxLambdaSize": "50mb"
+        "maxLambdaSize": "50mb",
+        "runtime": "python3.10"
       }
     }
   ],
