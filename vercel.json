@@ -1,20 +1,11 @@
 {
   "version": 2,
-  "build": {
-    "env": {
-      "POETRY_VERSION": "1.8.3"
+  "functions": {
+    "api/app.py": {
+      "runtime": "@vercel/python@4.2.0",
+      "includeFiles": "api/**"
     }
   },
-  "builds": [
-    {
-      "src": "api/app.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb",
-        "runtime": "python3.10"
-      }
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",

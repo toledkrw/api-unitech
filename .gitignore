@@ -4,3 +4,4 @@
 .env/credentials.json
 .devcontainer/devcontainer.env
 **/tempCodeRunnerFile.py
+log/
