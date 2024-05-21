@@ -31,7 +31,7 @@ def generate_multiple_choice_question():
         prompt=\
             f"Generate a test question, with five options (A, B, C, D, E), about the subject of {subject} at the {academic_level} level, focusing on {theme} theme." + \
             "Please provide your response in Json format with the following structure: " + \
-            "{question_statement:'question statement that you will generate', alternatives:[{a:'option'}, {b:'option'}, {c:'option'}, {d:'option'}, {e:'option'}]], correct_answer:'correct_option_letter'}" + \
+            "{question_statement:'question statement that you will generate', alternatives:[{a:'option'}, {b:'option'}, {c:'option'}, {d:'option'}, {e:'option'}], correct_answer:'correct_option_letter'}" + \
             f"The question statement and alternatives must be in the following language: {locale}."
         
         model = genai.GenerativeModel('gemini-pro')
