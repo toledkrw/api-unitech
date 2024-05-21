@@ -24,12 +24,17 @@ RUN DEBIAN_FRONTEND=noninteractive \
         libffi-dev \
         liblzma-dev
 
+# Setting up API Keys on ENV
+ARG OPENAI_KEY = ""
+ARG GEMINI_KEY = ""
+
+ENV OPENAI_KEY = "${OPENAI_KEY}"
+ENV GEMINI_KEY = "${GEMINI_KEY}"
+        
 # Python and poetry installation
 USER $USER
 ARG HOME="/home/$USER"
 ARG PYTHON_VERSION=3.10
-# ARG PYTHON_VERSION=3.10
-
 ENV PYENV_ROOT="${HOME}/.pyenv"
 ENV PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${HOME}/.local/bin:$PATH"
 
