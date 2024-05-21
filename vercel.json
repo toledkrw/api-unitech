@@ -10,7 +10,8 @@
       "src": "api/app.py",
       "use": "@vercel/python",
       "config": {
-        "runtime": "python3.10"
+        "runtime": "python3.10",
+        "maxLambdaSize": "50mb"
       }
     }
   ],
