@@ -24,12 +24,13 @@ RUN DEBIAN_FRONTEND=noninteractive \
         libffi-dev \
         liblzma-dev
 
-# Setting up API Keys on ENV
-ARG OPENAI_KEY = ""
-ARG GEMINI_KEY = ""
-
-ENV OPENAI_KEY = "${OPENAI_KEY}"
-ENV GEMINI_KEY = "${GEMINI_KEY}"
+# Setting up .env file
+RUN if [ ! -f ".devcontainer/devcontainer.env" ]; then \
+    echo "The '.env' file does not exists. Now creating one:" ; \
+    touch ".devcontainer/devcontainer.env" ; \
+    echo -e 'OPENAI_KEY= \nGEMINI_KEY= ' > ".devcontainer/devcontainer.env" ; \
+    echo "Done." ; \
+    fi
         
 # Python and poetry installation
 USER $USER
