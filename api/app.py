@@ -18,4 +18,4 @@ if __name__ in ['__main__', 'app']:
         from test.routes.routes import initialize_routes as initialize_test_routes
         initialize_test_routes(app)
 
-    app.run(port=5000)
+    app.run(host='0.0.0.0')
