@@ -4,13 +4,13 @@ import google.generativeai as genai
 import os
 
 
-gemini_bp = Blueprint('geminiAI', __name__)
 MAIN_ROUTE = '/gmni'
+gemini_bp = Blueprint('geminiAI', __name__, url_prefix=MAIN_ROUTE)
 
 genai.configure(api_key=os.environ['GEMINI_KEY'])
 
 
-@gemini_bp.route(MAIN_ROUTE + '/multiple_choice_question', methods=['POST'])
+@gemini_bp.route('/multiple_choice_question', methods=['POST'])
 def generate_multiple_choice_question():
     data = request.get_json()
 

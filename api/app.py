@@ -10,7 +10,7 @@ args, unknown = parser.parse_known_args()
 app = Flask(__name__)
 CORS(app)
 
-if __name__ == '__main__':  
+if __name__ in ['__main__', 'app']:  
     if not args.test:
         from main.routes.routes import initialize_routes as initialize_main_routes
         initialize_main_routes(app)
@@ -18,4 +18,4 @@ if __name__ == '__main__':
         from test.routes.routes import initialize_routes as initialize_test_routes
         initialize_test_routes(app)
 
-    app.run()
+    app.run(port=5000)
