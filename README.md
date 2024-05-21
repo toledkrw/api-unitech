@@ -51,7 +51,34 @@ This project was created to hold an API on Flask (Python).
 ## 🎨 Features
 The application has the following functionality:
 
-### 🛠️ 
+### 👓 Google's Gemini @ /gmni
+
+#### [POST] @ /multiple_choice_question
+This enpoint retrieves a multiple choice question in the following structure:
+```
+{
+  question_statement:'question statement that AI will generate', 
+  alternatives:[
+    {a:'alternative'},
+    {b:'alternative'}, 
+    {c:'alternative'}, 
+    {d:'alternative'}, 
+    {e:'alternative'}
+  ], 
+  correct_answer:'correct_alternative_letter'
+}
+```
+It takes as **payload** the following:
+```
+{
+  "subject":"Science discipline like: Maths, Geography, etc.",
+  "academic_level":"Academic level like: First Grader, etc.",
+  "theme":"A theme within the chosen subject, like: Algebra, Captalism, etc.",
+  "locale":"Locale in which the prompt will be retrieved, like: pt-br, en-us, etc."
+}
+```
+
+### 🤖 OpenAi's GPT @ /opai
 
 lorem
 
@@ -64,7 +91,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <br/>
 
 ## 🧻 TODOs
-- [X] 1 -
+- [X] 1 - Gemini
+- [⠀] 2 - OpenAI
 
 <!-- ASSETS -->
 
