@@ -1,21 +1,15 @@
 {
-  "version": 2,
   "functions": {
     "api/app.py": {
       "runtime": "@vercel/python@4.2.0",
-      "includeFiles": "api/**"
+      "includeFiles": "./main/**"
     }
   },
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "api/app.py",
-      "methods": ["GET","POST","PUT","DELETE","OPTIONS"],
-      "headers": {
-        "Acces-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Methods": "*"
-      }
+      "src": "/(.*)"
+      ,"dest": "api/app.py"
+      ,"methods": ["GET","POST","PUT","DELETE","OPTIONS"]
     }
   ]
 }
