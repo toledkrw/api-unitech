@@ -5,7 +5,7 @@ from flask_cors import CORS
 parser = argparse.ArgumentParser()
 parser.add_argument('-t', '--test', help='Run this API in test mode.', action='store_true', required=False)
 
-args = parser.parse_args()
+args, unknown = parser.parse_known_args()
 
 app = Flask(__name__)
 CORS(app)
